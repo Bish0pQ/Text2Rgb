@@ -1,0 +1,15 @@
+C:\Users\Bish0pQ\Desktop\Projects\GitHub\Text2Rgb\Text2Rgb\Text2Rgb\bin\Debug\Text2Rgb.exe.config
+C:\Users\Bish0pQ\Desktop\Projects\GitHub\Text2Rgb\Text2Rgb\Text2Rgb\bin\Debug\Text2Rgb.exe
+C:\Users\Bish0pQ\Desktop\Projects\GitHub\Text2Rgb\Text2Rgb\Text2Rgb\bin\Debug\Text2Rgb.pdb
+C:\Users\Bish0pQ\Desktop\Projects\GitHub\Text2Rgb\Text2Rgb\Text2Rgb\obj\Debug\Text2Rgb.csprojAssemblyReference.cache
+C:\Users\Bish0pQ\Desktop\Projects\GitHub\Text2Rgb\Text2Rgb\Text2Rgb\obj\Debug\MainWindow.g.cs
+C:\Users\Bish0pQ\Desktop\Projects\GitHub\Text2Rgb\Text2Rgb\Text2Rgb\obj\Debug\App.g.cs
+C:\Users\Bish0pQ\Desktop\Projects\GitHub\Text2Rgb\Text2Rgb\Text2Rgb\obj\Debug\Text2Rgb_MarkupCompile.cache
+C:\Users\Bish0pQ\Desktop\Projects\GitHub\Text2Rgb\Text2Rgb\Text2Rgb\obj\Debug\Text2Rgb_MarkupCompile.lref
+C:\Users\Bish0pQ\Desktop\Projects\GitHub\Text2Rgb\Text2Rgb\Text2Rgb\obj\Debug\MainWindow.baml
+C:\Users\Bish0pQ\Desktop\Projects\GitHub\Text2Rgb\Text2Rgb\Text2Rgb\obj\Debug\Text2Rgb.g.resources
+C:\Users\Bish0pQ\Desktop\Projects\GitHub\Text2Rgb\Text2Rgb\Text2Rgb\obj\Debug\Text2Rgb.Properties.Resources.resources
+C:\Users\Bish0pQ\Desktop\Projects\GitHub\Text2Rgb\Text2Rgb\Text2Rgb\obj\Debug\Text2Rgb.csproj.GenerateResource.cache
+C:\Users\Bish0pQ\Desktop\Projects\GitHub\Text2Rgb\Text2Rgb\Text2Rgb\obj\Debug\Text2Rgb.csproj.CoreCompileInputs.cache
+C:\Users\Bish0pQ\Desktop\Projects\GitHub\Text2Rgb\Text2Rgb\Text2Rgb\obj\Debug\Text2Rgb.exe
+C:\Users\Bish0pQ\Desktop\Projects\GitHub\Text2Rgb\Text2Rgb\Text2Rgb\obj\Debug\Text2Rgb.pdb
