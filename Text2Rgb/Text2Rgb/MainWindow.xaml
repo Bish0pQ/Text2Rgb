@@ -13,18 +13,18 @@
             <TextBox Width="Auto" Margin="5" Height="200px"></TextBox>
             <!-- Encode Options -->
             <StackPanel Orientation="Horizontal" Margin="5 0 5 0" Height="35" HorizontalAlignment="Stretch">
-                <Button Content="Create image"  Width="100" ></Button>
-                <Button Content="Save image" Width="100" Margin="190 0 0 0"></Button>
+                <Button Name="btnCreateImage" Content="Create image"  Width="100" Click="BtnCreateImage_Click" ></Button>
+                <Button Name="btnSaveImage" Content="Save image" Width="100" Margin="190 0 0 0"></Button>
             </StackPanel>
             
             <!-- Progress Panel-->
             <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Horizontal">
-                    <ProgressBar Width="350" Height="25" Margin="5 10 5 5"></ProgressBar>
-                    <Label Content="0 %" Margin="5 10 5 5" FontFamily="Arial" FontWeight="Bold" Foreground="Green"></Label>
+                    <ProgressBar Name="prgsReporter" Width="350" Height="25" Margin="5 10 5 5"></ProgressBar>
+                    <Label Name="lblPercentage" Content="0 %" Margin="5 10 5 5" FontFamily="Arial" FontWeight="Bold" Foreground="Green"></Label>
                 </StackPanel>
-                <Label Content="Console Log: " FontFamily="Arial" FontWeight="Bold"></Label>
-                <TextBox Width="400" IsReadOnly="True" Height="75" Margin="5 0 5 0" Background="Black" Foreground="White"></TextBox>
+                <Label Name="lblConsoleLog" Content="Console Log: " FontFamily="Arial" FontWeight="Bold"></Label>
+                <TextBox Name="txtConsole" Width="400" IsReadOnly="True" Height="75" Margin="5 0 5 0" Background="Black" Foreground="White"></TextBox>
             </StackPanel>
         </StackPanel>
         <!-- Decode -->

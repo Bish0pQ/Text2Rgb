@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using System.Drawing;
 namespace Text2Rgb
 {
     /// <summary>
@@ -23,6 +23,11 @@ namespace Text2Rgb
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void BtnCreateImage_Click(object sender, RoutedEventArgs e)
+        {
+            Bitmap b = new Bitmap();
         }
     }
 }
