@@ -27,6 +27,7 @@ namespace Text2Rgb.Services
                 catch (Exception ex)
                 {
                     //Log error
+                    FileHelper.LogError(ex);
                 }
             }
         }
@@ -75,7 +76,7 @@ namespace Text2Rgb.Services
                 }
                 catch (Exception ex)
                 {
-
+                    FileHelper.LogError(ex);
                 }          
             }
 
