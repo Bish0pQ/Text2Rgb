@@ -8,8 +8,9 @@ namespace Text2Rgb.Interfaces
 {
     public interface IImage
     {
-        Bitmap CreateImage(Tuple<int,int> size);
+        Bitmap CreateImage(string text, int maxWidth);
         void CheckImageDirectory();
-        Tuple<int, int> GetImageSize(string text, int maxWidth);
+        Tuple<double, double> GetImageSize(string text, double maxWidth);
+
     }
 }
