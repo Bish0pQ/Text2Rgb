@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Text2Rgb"
         mc:Ignorable="d"
-        Title="Text to RGB Converter" Height="500" Width="415" Loaded="Window_Loaded">
+        Title="Text to RGB Converter" Height="500" Width="415" Loaded="Window_Loaded" ResizeMode="CanMinimize">
     
     <StackPanel Orientation="Vertical" Height="475" Width="400" Background="DarkGray">
         <!-- Input Area-->
@@ -24,13 +24,14 @@
                     <Label Name="lblWidth" Content="Width:" FontFamily="Arial" Margin="25 5 5 0" FontWeight="Bold"></Label>
                     <TextBox Name="txtMaxWidth" FontFamily="Courier New" Width="50" Margin="5"></TextBox>
                     <Label Name="lblInPixels" FontFamily="Arial" Content="px" Margin="0 5 5 5" FontWeight="Bold"></Label>
-                    <Button Name="btnSaveImage" Content="Save image" Height="30" Width="100" Margin="4 0 0 0"></Button>
+                    <Button Name="btnSaveImage" Content="Save image" Height="30" Width="100" Margin="4 0 0 0" Click="BtnSaveImage_Click"></Button>
                     <!--<Button Name="btnSaveImage" Content="Save image"  Height="30" Width="100" Margin="15 0 0 0" Click="BtnSaveImage_Click"></Button>-->
                 </StackPanel>
                 <!-- Decode Controls -->
                 <StackPanel Orientation="Horizontal">
-                    <Button Name="btnLoadImage" Content="Load image..." Width="100" Margin="5" Height="30" Click="BtnLoadImage_Click"></Button>
-                    <Button Name="btnDecodeImage" Content="Decode image" Width="100" Margin="165 5 5 5" Height="30" Click="BtnDecodeImage_Click"></Button>
+                    <Button Name="btnLoadText" Content="Load text..." Width="100" Margin="5" Height="30" Click="BtnLoadText_Click"></Button>
+                    <Button Name="btnLoadImage" Content="Load image..." Width="100" Margin="35 0 0 0" Height="30" Click="BtnLoadImage_Click"></Button>
+                    <Button Name="btnDecodeImage" Content="Decode image" Width="100" Margin="30 5 5 5" Height="30" Click="BtnDecodeImage_Click"></Button>
                 </StackPanel>
             </StackPanel>
         </GroupBox>
@@ -38,7 +39,7 @@
         <StackPanel Orientation="Vertical" Margin="5 0 5 5">
             <GroupBox Name="grpProgress" Header="Progress" Foreground="White">
                 <StackPanel Orientation="Horizontal">
-                    <ProgressBar Name="prgsReporter" Width="325" Height="25" Margin="5 10 5 5"></ProgressBar>
+                    <ProgressBar Name="prgsReporter" Width="325" Height="25" Margin="5 10 5 5" Maximum="100"></ProgressBar>
                     <Label Name="lblPercentage" Content="0 %" Margin="5 10 5 5" FontFamily="Arial" FontWeight="Bold" Foreground="Green"></Label>
                 </StackPanel>
             </GroupBox>
