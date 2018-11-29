@@ -5,34 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Text2Rgb"
         mc:Ignorable="d"
-        Title="Text to RGB Converter" Height="450" Width="800" Loaded="Window_Loaded">
-    <StackPanel Orientation="Horizontal">
-        <!-- Encode -->
-        <StackPanel Orientation="Vertical" Height="420" Width="400" Background="DarkGray">
-            <Label Content="Please type in your text here:" FontFamily="Arial" FontWeight="Bold" Margin="5 0 5 0"></Label>
-            <TextBox Width="Auto" Margin="5" Height="200px" Name="txtInput" MaxLines="10000" MaxLength="10000" TextWrapping="Wrap" AcceptsReturn="True"></TextBox>
-            <!-- Encode Options -->
-            <StackPanel Orientation="Horizontal" Margin="5 0 5 0" Height="35" HorizontalAlignment="Stretch">
-                <Button Name="btnCreateImage" Content="Create image"  Width="100" Click="BtnCreateImage_Click" ></Button>
-                <Label Name="lblWidth" Content="Width:" FontFamily="Arial" Margin="25 5 5 0" FontWeight="Bold"></Label>
-                <TextBox Name="txtMaxWidth" FontFamily="Courier New" Width="50" Margin="5"></TextBox>
-                <Label Name="lblInPixels" FontFamily="Arial" Content="px" Margin="0 5 5 5" FontWeight="Bold"></Label>
-                <Button Name="btnSaveImage" Content="Save image" Width="100" Margin="25 0 0 0" Click="BtnSaveImage_Click"></Button>
-            </StackPanel>
-            
-            <!-- Progress Panel-->
+        Title="Text to RGB Converter" Height="500" Width="415" Loaded="Window_Loaded" ResizeMode="CanMinimize">
+    
+    <StackPanel Orientation="Vertical" Height="475" Width="400" Background="DarkGray">
+        <!-- Input Area-->
+        <GroupBox Name="grpInput" Header="Input" Foreground="White" Margin="5 0 5 0">
             <StackPanel Orientation="Vertical">
+                <Label Content="Please type in your text here:" FontFamily="Arial" FontWeight="Bold" Margin="5 0 5 0"></Label>
+                <TextBox Width="Auto" Margin="5" Height="200px" Name="txtInput" MaxLines="65500" MaxLength="65500" TextWrapping="Wrap" AcceptsReturn="True"></TextBox>
+            </StackPanel>
+        </GroupBox>
+        <!-- Encode Options -->
+        <GroupBox Name="grpControls" Header="Controls" Foreground="White" Margin="5">
+            <StackPanel Orientation="Vertical">
+                <!-- Creation Controls -->
+                <StackPanel Orientation="Horizontal" Margin="5 0 5 0" Height="35" HorizontalAlignment="Stretch">
+                    <Button Name="btnCreateImage" Height="30" Content="Create image"  Width="100" Click="BtnCreateImage_Click" ></Button>
+                    <Label Name="lblWidth" Content="Width:" FontFamily="Arial" Margin="25 5 5 0" FontWeight="Bold"></Label>
+                    <TextBox Name="txtMaxWidth" FontFamily="Courier New" Width="50" Margin="5"></TextBox>
+                    <Label Name="lblInPixels" FontFamily="Arial" Content="px" Margin="0 5 5 5" FontWeight="Bold"></Label>
+                    <Button Name="btnSaveImage" Content="Save image" Height="30" Width="100" Margin="4 0 0 0" Click="BtnSaveImage_Click"></Button>
+                    <!--<Button Name="btnSaveImage" Content="Save image"  Height="30" Width="100" Margin="15 0 0 0" Click="BtnSaveImage_Click"></Button>-->
+                </StackPanel>
+                <!-- Decode Controls -->
                 <StackPanel Orientation="Horizontal">
-                    <ProgressBar Name="prgsReporter" Width="350" Height="25" Margin="5 10 5 5"></ProgressBar>
+                    <Button Name="btnLoadText" Content="Load text..." Width="100" Margin="5" Height="30" Click="BtnLoadText_Click"></Button>
+                    <Button Name="btnLoadImage" Content="Load image..." Width="100" Margin="35 0 0 0" Height="30" Click="BtnLoadImage_Click"></Button>
+                    <Button Name="btnDecodeImage" Content="Decode image" Width="100" Margin="30 5 5 5" Height="30" Click="BtnDecodeImage_Click"></Button>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+        <!-- Progress Panel-->
+        <StackPanel Orientation="Vertical" Margin="5 0 5 5">
+            <GroupBox Name="grpProgress" Header="Progress" Foreground="White">
+                <StackPanel Orientation="Horizontal">
+                    <ProgressBar Name="prgsReporter" Width="325" Height="25" Margin="5 10 5 5" Maximum="100"></ProgressBar>
                     <Label Name="lblPercentage" Content="0 %" Margin="5 10 5 5" FontFamily="Arial" FontWeight="Bold" Foreground="Green"></Label>
                 </StackPanel>
-                <Label Name="lblConsoleLog" Content="Console Log: " FontFamily="Arial" FontWeight="Bold"></Label>
-                <TextBox Name="txtConsole" Width="400" IsReadOnly="True" Height="75" Margin="5 0 5 0" Background="Black" Foreground="White"></TextBox>
-            </StackPanel>
-        </StackPanel>
-        <!-- Decode -->
-        <StackPanel Orientation="Vertical">
+            </GroupBox>
 
         </StackPanel>
+        <Label Name="lblCredits" Content="Created by Bish0pQ"></Label>
     </StackPanel>
 </Window>
