@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Drawing;
 using Text2Rgb.Services;
 using System.IO;
+using Microsoft.Win32;
 
 namespace Text2Rgb
 {
@@ -25,7 +26,7 @@ namespace Text2Rgb
     {
         ImageService imgService;
         Bitmap bm;
-        
+        Bitmap loadedBm;
         public MainWindow()
         {
             InitializeComponent();
@@ -86,6 +87,48 @@ namespace Text2Rgb
             catch (Exception ex)
             {
                 FileHelper.LogError(ex);
+            }
+        }
+
+        private void BtnLoadImage_Click(object sender, RoutedEventArgs e)
+        {
+            string path = string.Empty;
+
+            /* Show openfiledialog and set bitmap */
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            //Settings
+            ofd.Filter = "Image Files(*.BMP;*.JPG;*.GIF) | *.BMP;*.JPG;*.GIF";
+            ofd.FilterIndex = 0;
+            ofd.Title = "Text2Rgb | Select an image";
+
+            if (ofd.ShowDialog() == true)
+            {
+                path = ofd.FileName;
+            }
+
+            if (File.Exists(path))
+            {
+                try
+                {
+                    loadedBm = new Bitmap(path);
+                    MessageBox.Show("Image has succesfully been loaded!", "Success: image has been loaded!", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                catch (Exception ex)
+                {
+                    FileHelper.LogError(ex);
+                    MessageBox.Show("Unable to open the image, please make sure the image file is not corrupted and try again.", "Error: could not load image!", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+               
+            }
+        }
+
+        private void BtnDecodeImage_Click(object sender, RoutedEventArgs e)
+        {
+            // Check if an image is loaded
+            if (loadedBm == null)
+            {
+                MessageBox.Show("It seems you have not loaded an image yet! Please make sure you load an image prior to decoding!", "Error: no image has been loaded", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }
